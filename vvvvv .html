@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day!</title>
+    <style>
+        body {
+            background-color: #f8e1e1;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: #e7005f;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            display: none;
+            animation: fadeIn 1s forwards;
+        }
+        .heart {
+            font-size: 100px;
+            color: #ff4d88;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .heart:active {
+            transform: scale(0.9);
+        }
+        .message {
+            font-size: 36px;
+            color: #ff0066;
+            font-weight: bold;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 1s;
+        }
+        p {
+            font-size: 24px;
+            margin-top: 20px;
+            line-height: 1.5;
+            display: none;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 2s;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Happy Valentine's Day!</h1>
+    <div class="heart" onclick="showMessage()">❤️</div>
+    <div class="message">Happy Valentine, Baby!</div>
+    <p>Sending you love and happiness on this special day. May your heart always be full of joy and love!</p>
+
+    <script>
+        function showMessage() {
+            document.querySelector('h1').style.display = 'block';
+            document.querySelector('.message').style.opacity = '1';
+            document.querySelector('.message').style.animation = 'fadeIn 2s forwards';
+            document.querySelector('p').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
